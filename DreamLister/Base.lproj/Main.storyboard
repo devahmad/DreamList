@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ec6-CR-1im">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSans(FaNum).ttf">
+            <string>IRANSansFaNum</string>
+        </array>
+        <array key="IRANSans(FaNum)_Light.ttf">
+            <string>IRANSansFaNum-Light</string>
+        </array>
+        <array key="IRANSans(FaNum)_UltraLight.ttf">
+            <string>IRANSansFaNum-UltraLight</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--لیست جادویی-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="031-q0-kAx">
+                                <color key="backgroundColor" red="0.99062830209999997" green="0.72613126039999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ABR-w9-Fiv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="حروف الفبا"/>
+                                    <segment title="قیمت"/>
+                                    <segment title="جدید ترین ها"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="eI5-kj-UHa"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8Y-98-Xxw">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="4CY-3o-7EY" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4CY-3o-7EY" id="R6C-dB-TMo">
+                                            <frame key="frameInset" width="343" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpU-K8-y3d">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-Ah-QrZ">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="wIk-R9-5p3"/>
+                                                                <constraint firstAttribute="height" constant="100" id="ylT-gk-Bug"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم بخش" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-FJ-g0L">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Dbl-tG-4mL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IRANSansFaNum" family="IRANSans(FaNum)" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۰۰ هزار تومن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk3-o0-e1E">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="aoZ-z8-pYU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="توضیحات" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4s-8J-BCy">
+                                                            <fontDescription key="fontDescription" name="IRANSansFaNum-UltraLight" family="IRANSans(FaNum)" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TNc-FJ-g0L" firstAttribute="leading" secondItem="fpU-K8-y3d" secondAttribute="leading" constant="8" id="4dc-MR-3W0"/>
+                                                        <constraint firstItem="jf6-Ah-QrZ" firstAttribute="centerY" secondItem="fpU-K8-y3d" secondAttribute="centerY" id="DHg-ZR-xoI"/>
+                                                        <constraint firstItem="V4s-8J-BCy" firstAttribute="leading" secondItem="fpU-K8-y3d" secondAttribute="leading" constant="8" id="GsQ-y7-1LJ"/>
+                                                        <constraint firstItem="jf6-Ah-QrZ" firstAttribute="leading" secondItem="Mk3-o0-e1E" secondAttribute="trailing" constant="8" id="Xdf-gM-bZv"/>
+                                                        <constraint firstItem="V4s-8J-BCy" firstAttribute="top" secondItem="Mk3-o0-e1E" secondAttribute="bottom" constant="8" id="c2q-XB-B3U"/>
+                                                        <constraint firstItem="jf6-Ah-QrZ" firstAttribute="leading" secondItem="V4s-8J-BCy" secondAttribute="trailing" constant="8" id="dgF-Hy-TUd"/>
+                                                        <constraint firstItem="Mk3-o0-e1E" firstAttribute="leading" secondItem="fpU-K8-y3d" secondAttribute="leading" constant="8" id="fI2-Px-5Jz"/>
+                                                        <constraint firstItem="jf6-Ah-QrZ" firstAttribute="leading" secondItem="TNc-FJ-g0L" secondAttribute="trailing" constant="8" id="j7O-6k-SEi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jf6-Ah-QrZ" secondAttribute="trailing" constant="8" id="l5Q-on-kMJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="V4s-8J-BCy" secondAttribute="bottom" constant="8" id="mmu-c4-Adq"/>
+                                                        <constraint firstItem="TNc-FJ-g0L" firstAttribute="top" secondItem="fpU-K8-y3d" secondAttribute="top" constant="8" id="sde-JU-Vul"/>
+                                                        <constraint firstItem="Mk3-o0-e1E" firstAttribute="top" secondItem="TNc-FJ-g0L" secondAttribute="bottom" constant="8" id="vOp-cS-tuB"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="fpU-K8-y3d" firstAttribute="bottom" secondItem="R6C-dB-TMo" secondAttribute="bottomMargin" id="9fd-fb-sY5"/>
+                                                <constraint firstItem="fpU-K8-y3d" firstAttribute="trailing" secondItem="R6C-dB-TMo" secondAttribute="trailingMargin" id="Dt1-Kp-kCA"/>
+                                                <constraint firstItem="fpU-K8-y3d" firstAttribute="top" secondItem="R6C-dB-TMo" secondAttribute="topMargin" id="KWv-4e-oIG"/>
+                                                <constraint firstItem="fpU-K8-y3d" firstAttribute="leading" secondItem="R6C-dB-TMo" secondAttribute="leadingMargin" id="uYY-1g-lR9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="details" destination="V4s-8J-BCy" id="hAs-DP-j7Q"/>
+                                            <outlet property="price" destination="Mk3-o0-e1E" id="gIr-Ga-YDI"/>
+                                            <outlet property="thumb" destination="jf6-Ah-QrZ" id="KqS-rM-hEa"/>
+                                            <outlet property="title" destination="TNc-FJ-g0L" id="AMN-ca-DaA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="031-q0-kAx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="5ha-4c-0RE"/>
+                            <constraint firstItem="031-q0-kAx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="JEd-xd-9Eg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E8Y-98-Xxw" secondAttribute="bottom" id="SCz-L0-8Qi"/>
+                            <constraint firstItem="E8Y-98-Xxw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hQN-7G-AfO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="031-q0-kAx" secondAttribute="trailing" constant="20" id="jVl-bv-Eoj"/>
+                            <constraint firstItem="E8Y-98-Xxw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qpJ-Pm-7RS"/>
+                            <constraint firstItem="E8Y-98-Xxw" firstAttribute="top" secondItem="031-q0-kAx" secondAttribute="bottom" constant="20" id="tua-iD-OPe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="لیست جادویی" id="1Fy-QN-jv1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G7c-kJ-EDI">
+                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Rfr-cW-UVZ" kind="show" identifier="ItemDetailsVCNew" id="EGa-QQ-GSN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="031-q0-kAx" id="k9q-l6-myP"/>
+                        <outlet property="tableView" destination="E8Y-98-Xxw" id="85Q-dd-6ag"/>
+                        <segue destination="Rfr-cW-UVZ" kind="show" identifier="ItemDetailsVC" id="VBC-gG-ZMk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.5999999999999" y="36.431784107946029"/>
+        </scene>
+        <!--اضافه و حذف-->
+        <scene sceneID="1BD-2S-A42">
+            <objects>
+                <viewController id="Rfr-cW-UVZ" customClass="ItemDetailsVc" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esX-4y-de3"/>
+                        <viewControllerLayoutGuide type="bottom" id="GHk-zh-o9A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0C-mD-F4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-yq-xdn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Q85-As-vJS"/>
+                                    <constraint firstAttribute="width" constant="100" id="hxv-hk-UUn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-bM-Qwn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DSW-fB-5tA"/>
+                                    <constraint firstAttribute="height" constant="100" id="lUI-Yg-IR0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="Rfr-cW-UVZ" eventType="touchUpInside" id="CqV-CE-SwG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم کالا را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LwY-JP-Mp7" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3FZ-gO-WCM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="قیمت را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-Ub-JXq" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wgl-1v-wrv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="توضیحات را وارد کنید" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFj-x8-zq3" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="sSH-gq-P5y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGu-cA-lTM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="7Rg-xD-dSO"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-5G-eVS">
+                                <color key="backgroundColor" red="0.99060553312301636" green="0.72762042284011841" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SCH-Si-DCo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum" family="IRANSans(FaNum)" pointSize="21"/>
+                                <state key="normal" title="ذخیره">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePresed:" destination="Rfr-cW-UVZ" eventType="touchUpInside" id="AKn-mt-BRv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="محل خود را انتخاب کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-42-ADa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="i9r-ou-Zcm"/>
+                                    <constraint firstAttribute="width" constant="178" id="pON-gP-nDP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum" family="IRANSans(FaNum)" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aFj-x8-zq3" firstAttribute="leading" secondItem="j0C-mD-F4A" secondAttribute="leadingMargin" id="2vR-GE-ZOB"/>
+                            <constraint firstItem="xVW-bM-Qwn" firstAttribute="centerX" secondItem="Hz2-yq-xdn" secondAttribute="centerX" id="A8n-dy-kwi"/>
+                            <constraint firstItem="LwY-JP-Mp7" firstAttribute="leading" secondItem="j0C-mD-F4A" secondAttribute="leadingMargin" id="Ad0-P4-Uhg"/>
+                            <constraint firstItem="j1Y-5G-eVS" firstAttribute="trailing" secondItem="j0C-mD-F4A" secondAttribute="trailingMargin" id="BQ8-5B-atZ"/>
+                            <constraint firstItem="XGu-cA-lTM" firstAttribute="leading" secondItem="j0C-mD-F4A" secondAttribute="leadingMargin" id="CU5-dn-H9x"/>
+                            <constraint firstItem="aFj-x8-zq3" firstAttribute="trailing" secondItem="j0C-mD-F4A" secondAttribute="trailingMargin" id="Dtu-gX-gaa"/>
+                            <constraint firstItem="GHk-zh-o9A" firstAttribute="top" secondItem="j1Y-5G-eVS" secondAttribute="bottom" constant="20" id="GkD-gd-zXr"/>
+                            <constraint firstItem="xVW-bM-Qwn" firstAttribute="leading" secondItem="hLY-Ub-JXq" secondAttribute="trailing" constant="8" id="HMn-k4-2dy"/>
+                            <constraint firstItem="xVW-bM-Qwn" firstAttribute="centerY" secondItem="Hz2-yq-xdn" secondAttribute="centerY" id="IQS-6J-7E0"/>
+                            <constraint firstItem="aFj-x8-zq3" firstAttribute="top" secondItem="xVW-bM-Qwn" secondAttribute="bottom" constant="15" id="JiW-Wp-Pbd"/>
+                            <constraint firstItem="hLY-Ub-JXq" firstAttribute="top" secondItem="LwY-JP-Mp7" secondAttribute="bottom" constant="8" id="NhK-ZV-OOK"/>
+                            <constraint firstItem="LwY-JP-Mp7" firstAttribute="top" secondItem="esX-4y-de3" secondAttribute="bottom" constant="18" id="QDO-i3-Pl6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XGu-cA-lTM" secondAttribute="trailing" id="RMm-0Z-oDx"/>
+                            <constraint firstItem="Hz2-yq-xdn" firstAttribute="top" secondItem="esX-4y-de3" secondAttribute="bottom" constant="8" id="SXN-7R-UDe"/>
+                            <constraint firstItem="9uw-42-ADa" firstAttribute="centerX" secondItem="j0C-mD-F4A" secondAttribute="centerX" id="SbJ-41-7jt"/>
+                            <constraint firstItem="j1Y-5G-eVS" firstAttribute="leading" secondItem="j0C-mD-F4A" secondAttribute="leadingMargin" id="Zcl-H3-B4g"/>
+                            <constraint firstItem="xVW-bM-Qwn" firstAttribute="leading" secondItem="LwY-JP-Mp7" secondAttribute="trailing" constant="8" id="jfO-sL-SoC"/>
+                            <constraint firstItem="XGu-cA-lTM" firstAttribute="top" secondItem="9uw-42-ADa" secondAttribute="bottom" constant="8" id="kHV-QA-NWl"/>
+                            <constraint firstItem="j1Y-5G-eVS" firstAttribute="top" secondItem="XGu-cA-lTM" secondAttribute="bottom" constant="8" id="kNq-2c-JIZ"/>
+                            <constraint firstItem="Hz2-yq-xdn" firstAttribute="trailing" secondItem="j0C-mD-F4A" secondAttribute="trailingMargin" id="rJO-hd-WqC"/>
+                            <constraint firstItem="hLY-Ub-JXq" firstAttribute="leading" secondItem="j0C-mD-F4A" secondAttribute="leadingMargin" id="udG-rO-dYa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="اضافه و حذف" id="Wyu-WY-Nnm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="sXF-CC-3M8">
+                            <color key="tintColor" red="0.99953812360000005" green="0.001661639311" blue="0.12072489409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="Rfr-cW-UVZ" id="evE-3W-tts"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="PriceField" destination="hLY-Ub-JXq" id="RAk-oh-Nbh"/>
+                        <outlet property="detailsField" destination="aFj-x8-zq3" id="FLO-RN-dS5"/>
+                        <outlet property="storePicker" destination="XGu-cA-lTM" id="O3b-nB-1So"/>
+                        <outlet property="thumbimg" destination="Hz2-yq-xdn" id="leu-P8-wW3"/>
+                        <outlet property="titleField" destination="LwY-JP-Mp7" id="62S-AY-ldk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sy5-1o-XG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.8" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JDn-bd-jFa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" id="ec6-CR-1im" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXg-Xj-OGj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99062830209732056" green="0.72613126039505005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" red="1" green="0.12851140455986393" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cnC-Tp-P8k">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kxo-46-6yX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLr-ee-feg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imagePick" width="300" height="300"/>
+        <image name="tesla" width="800" height="489"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VBC-gG-ZMk"/>
+    </inferredMetricsTieBreakers>
+</document>
